@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Техномарт</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="symbols-technomart/css/symbols-technomart.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="container">
-            <div class="header-top">
-                <h1>ТЕХНОМАРТ</h1>
-                <input type="text" placeholder="Найти:" class = "input-search">
-                <div class="counter-favorites">
-                    <a href="#" class="favorites">Закладки: 0</a>
+    <header class="header-main">
+            <div class="container">
+                    <div class="logo">
+                        <h1>ТЕХНОМАРТ</h1>
                     </div>
-                <div class="counter-cart">
-                    <a href="#" class="cart">Корзина: 0</a>
-                </div>
-                <div class="order">
-                    <a href="#">Оформить заказ</a>
-                </div>
+                        <input type="text" placeholder="Поиск:" class = "input-search">
+                    <div class="header-user-block">
+                        <a href="#" class="favorites">Закладки: 0</a>
+                        <a href="#" class="cart">Корзина: 0</a>
+                        <a href="#">Оформить заказ</a>
+                    </div>
             </div>
-        <div class="description">
-            <p>Интернет-магазин строительных материалов и инструмента для ремонта</p>
-        </div>
-        <div class="phone">
-            <b>+7(812) 555-05-55</b>
-        </div>
-        <div>
-            <p>г. Королев, Канальный проезд, д.9</p>
-        </div>
-        <div class="user-block">
-            <a href="#" class="login">Войти</a>
-            <a href="#" class="registration">Регистрация</a>
+    </header>
+    <div class="container header-bottom">
+            <div class="description">
+                <p>Интернет-магазин строительных материалов и инструмента для ремонта</p>
+            </div>
+            <div class="contact">
+                <b>+7(812) 555-05-55</b>
+                <p>г. Королев, Канальный проезд, д.9</p>
+            </div>
+            <div class="user-block">
+                <a href="#" class="login">Войти</a>
+                <a href="#" class="registration">Регистрация</a>
             </div>
          <nav class="main-nav">
              <ul>
@@ -59,64 +59,68 @@
              </ul>
          </nav>
     </div>
-    </header>
-    <main class="container">
-        <section class="feature">
-            <ul>
-                <li class="feature-item">
-                    <a href="#" class="feature-item-link">
-                        <img src="images/Features/Materials.svg" alt="Материалы">
-                        <b class="feature-name">МАТЕРИАЛЫ</b>
-                        <span class="feature-tip">НА ЛЮБОЙ ВКУС</span>
-                    </a>
-                </li>
-                <li class="feature-item">
-                    <a href="#" class="feature-item-link">
-                        <img src="images/Features/Tools.svg" alt="Инструмент">
-                        <b class="feature-name">ИНСТРУМЕНТ</b>
-                        <span class="feature-tip">НА ВСЕ СЛУЧАИ</span>
-                    </a>
-                </li>
-                <li class="feature-item">
-                    <a href="#" class="feature-item-link">
-                        <img src="images/Features/Equipment.svg" alt="Техника">
-                        <b class="feature-name">ТЕХНИКА</b>
-                        <span class="feature-tip">ДЛЯ СТРОЙКИ</span>
-                    </a>
-                </li>
-                <li class="feature-item-carousel">
-                    <div id ="carousel" class="carousel">
-                        <button class="arrow-prev">◀</button>
-                        <div class="gallery">
-                            <ul>
-                                <li><img src="images/Features/Features-slider/Man.jpg"></li>
-                            </ul>
-                            <button class="arrow-next">▶</button>
+    <div class="container">
+        <main>
+            <section class="feature">
+                <div class="feature-top">
+                    <div class="feature-item">
+                        <a href="#" class="feature-item-link">
+                            <img src="images/Features/Materials.svg" alt="Материалы">
+                            <b class="feature-name">МАТЕРИАЛЫ</b>
+                            <span class="feature-tip">НА ЛЮБОЙ ВКУС</span>
+                        </a>
+                    </div>
+                    <div class="feature-item">
+                        <a href="#" class="feature-item-link">
+                            <img src="images/Features/Tools.svg" alt="Инструмент">
+                            <b class="feature-name">ИНСТРУМЕНТ</b>
+                            <span class="feature-tip">НА ВСЕ СЛУЧАИ</span>
+                        </a>
+                    </div>
+                    <div class="feature-item">
+                        <a href="#" class="feature-item-link">
+                            <img src="images/Features/Equipment.svg" alt="Техника">
+                            <b class="feature-name">ТЕХНИКА</b>
+                            <span class="feature-tip">ДЛЯ СТРОЙКИ</span>
+                        </a>
+                    </div>
+                </div>
+                    <div class="feature-item-carousel">
+                        <div id ="carousel" class="carousel">
+                            <!--<button class="arrow-prev">◀</button>-->
+                            <!--<button class="arrow-next">▶</button>-->
+                            <div class="gallery">
+                                <ul>
+                                    <li><img src="images/Features/Features-slider/Man.jpg"></li>
+                                </ul>
+
+                            </div>
                         </div>
                     </div>
-                </li>
-                <li class="feature-item">
-                    <a href="#" class="feature-item-link">
-                        <img src="images/Features/Cart.svg" alt="Скидки">
-                        <b class="feature-name">СКИДКИ 50%</b>
-                        <span class="feature-tip">НА 350 ТОВАРОВ</span>
-                    </a>
-                </li>
-                <li class="feature-item">
-                    <a href="#" class="feature-item-link">
-                        <img src="images/Features/Cart.svg" alt="Доставка">
-                        <b class="feature-name">ДОСТАВКА</b>
-                        <span class="feature-tip">БЕСПЛАТНО</span>
-                    </a>
-                </li>
-            </ul>
-        </section>
-    </main>
+                <div class="feature-right">
+                    <div class="feature-item">
+                        <a href="#" class="feature-item-link">
+                            <img src="images/Features/Cart.svg" alt="Скидки">
+                            <b class="feature-name">СКИДКИ 50%</b>
+                            <span class="feature-tip">НА 350 ТОВАРОВ</span>
+                        </a>
+                    </div>
+                    <div class="feature-item">
+                        <a href="#" class="feature-item-link">
+                            <img src="images/Features/Cart.svg" alt="Доставка">
+                            <b class="feature-name">ДОСТАВКА</b>
+                            <span class="feature-tip">БЕСПЛАТНО</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
     <div class="container">
         <section class="popular">
             <div class="popular-header">
-                <h2>Популярные товары:</h2>
-                <a href="#" >Все популярные товары</a>
+                <h2 class="pop-h">Популярные товары:</h2>
+                <a href="#" class="pop-button" >Все популярные товары</a>
             </div>
             <div class="popular-product">
                 <a href="#"><img src="images/Items/BOSCH BFG 9000.jpg" width="184" height="164" alt="Перфоратор Bosch BFG9000"></a>
@@ -136,7 +140,7 @@
                 <p class="prev-price">30500 Р.</p>
                 <p class="current-price"><a href="#">25500 Р.</a></p>
             </div>
-            <div class="popular-product">
+            <div class="popular-product last">
                 <a href="#"><img src="images/Items/BOSCH BFG 2000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG2000"></a>
                 <b class="product-name"><a href="#">Перфоратор Bosch BFG2000</a></b>
                 <p class="prev-price"></p>
@@ -147,9 +151,10 @@
     <div class="container">
         <section class="popular">
             <div class="popular-header">
-                <h2>Популярные производители:</h2>
-                <a href="#" >Все производители</a>
+                <h2 class="pop-h">Популярные производители:</h2>
+                <a href="#" class="pop-button" >Все производители</a>
             </div>
+            <!--legend, fieldset-->
             <div class="popular-brand">
                 <a href="#"><img src="images/Brands/Bosch.png" width="126" height="37" alt="Bosch"></a>
 
@@ -161,7 +166,7 @@
             <div class="popular-brand">
                 <a href="#"><img src="images/Brands/DeWALT.png" width="146" height="44" alt="DeWALT"></a>
             </div>
-            <div class="popular-brand">
+            <div class="popular-brand last">
                 <a href="#"><img src="images/Brands/Интерскол.png" width="200" height="88" alt="ИНТЕРСКОЛ"></a>
             </div>
             <div class="popular-brand">
@@ -173,34 +178,44 @@
             <div class="popular-brand">
                 <a href="#"><img src="images/Brands/AEG.png" width="151" height="96" alt="AEG"></a>
             </div>
-            <div class="popular-brand">
+            <div class="popular-brand last">
                 <a href="#"><img src="images/Brands/Metabo.png" width="204" height="69" alt="Metabo"></a>
             </div>
         </section>
     </div>
     <div class="container">
         <section class="services">
-            <h2 class="services-header">Сервисы</h2>
-            <p class="services-text">Хороший интернет-магазин отличается от плохого не только ценами!
-                Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-            <h3 class="services-sub-header">Доставка</h3>
-            <p class="services-text">Мы с удовольствием доставим ваш товар прямо
-                к вашему подъезду совершенно бесплатно!
-                Ведь мы неплохо заработаем,
-                поднимая его на ваш на этаж!</p>
-            <h3 class="services-sub-header">Гарантия</h3>
-            <p class="services-text">На все продукты предоставляем гарантию от производителя</p>
-            <h3 class="services-sub-header">Кредит</h3>
-            <p class="services-text">Можете взять кредит</p>
+            <div class="services-description">
+                <h2 class="services-header">Сервисы</h2>
+                <p class="services-text">Хороший интернет-магазин отличается от плохого не только ценами!
+                    Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+            </div>
             <div class="services-btn-group">
                 <button class="services-btn">Доставка</button>
                 <button class="services-btn">Гарантия</button>
                 <button class="services-btn">Кредит</button>
             </div>
+            <div class="service delivery">
+                <h3 class="services-sub-header">Доставка</h3>
+                <p class="services-text">Мы с удовольствием доставим ваш товар прямо
+                    к вашему подъезду совершенно бесплатно!
+                    Ведь мы неплохо заработаем,
+                    поднимая его на ваш на этаж!</p>
+            </div>
+            <div class="service warranty">
+                <h3 class="services-sub-header">Гарантия</h3>
+                <p class="services-text">На все продукты предоставляем гарантию от производителя</p>
+            </div>
+            <div class="service credit">
+                <h3 class="services-sub-header">Кредит</h3>
+                <p class="services-text">Можете взять кредит</p>
+            </div>
+            <div class="delivery-pic">
+                <img src="images/Services/Delivery.png" width="206" height="146" alt="Доставка">
+            </div>
         </section>
     </div>
-    <div class="container">
-        <section class="about">
+        <section class="container about">
             <div class="about-company">
                 <h2 class="about-company-header">КОМПАНИЯ "ТЕХНОМАРТ"</h2>
                 <p class="about-company-text">
@@ -215,28 +230,27 @@
                         <li>Автотрейдинг</li>
                         <li>ЖелДорЭкспедиция</li>
                 </ul>
-                <a class="about-company-btn">ПОДРОБНЕЕ О КОМПАНИИ</a>
+                <a href="#" class="about-company-btn">ПОДРОБНЕЕ О КОМПАНИИ</a>
             </div>
             <div class="about-map">
                 <h2 class="about-map-header">КОНТАКТЫ</h2>
                 <p class="about-map-text">
                     Вы можете забрать товар сами, заехав в наш офис:
                 </p>
+                <img src="images/About/Map.jpg" class="map-img" width="300" height="158">
             </div>
         </section>
-        <footer class="main-footer">
-            <div class="container">
-            <section class="main-footer-about">
+        <footer class="container main-footer">
+            <div class="main-footer-about">
                 © 2010–2016 Компания «Техномарт»<br>
                 Все права защищены
-            </section>
-            <section class="footer-social">
+            </div>
+            <div class="footer-social">
                 <a class="social-btn-vk" href="#">vk</a>
                 <a class="social-btn-fb" href="#">fb</a>
                 <a class="social-btn-inst" href="#">instagram</a>
-            </section>
             </div>
+            <div class="developer">Разработано: <br> Axepuff </div>
         </footer>
-    </div>
 </body>
 </html>
