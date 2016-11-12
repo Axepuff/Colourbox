@@ -265,7 +265,7 @@ body {
 }
 
 .feature {
-    font-size: 0px;
+    font-size: 0;
 }
 
 .feature-item {
@@ -273,7 +273,7 @@ body {
     box-sizing: border-box;
     width: 300px;
     min-height: 123px;
-    margin: 20px 20px 20px 0px;
+    margin: 20px 20px 20px 0;
     font-size: 24px;
     position: relative;
 }
@@ -315,6 +315,15 @@ body {
     border: 1px solid transparent;
     border-radius: 3px;
     min-width: 134px;
+}
+
+.feature-item a:hover {
+    background-color: rgba(116, 116, 116, 0.7);
+}
+
+.feature-item a:focus {
+    background-color: rgba(116, 116, 116, 0.8);
+    color: #feffff;
 }
 
 .feature-item b {
@@ -398,11 +407,11 @@ body {
 }
 
 .last {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .popular {
-    font-size: 0px;
+    font-size: 0;
     margin-bottom: 20px;
 }
 
@@ -445,7 +454,7 @@ body {
 }
 
 .delivery-pic {
-    margin-right: 0px;
+    margin-right: 0;
     display: inline-block;
     box-sizing: border-box;
 }
