@@ -464,16 +464,13 @@ body {
     display: none;
 }
 
-.flipper-imgContainer:hover {
-    height: 10px;
-}
 
 /*.flipper-imgContainer:hover .popular-product{*/
     /*border: transparent;*/
     /*background: red;*/
 /*}*/
 
-.flipper-imgContainer:hover ~.flipper-btn {
+.flipper-imgContainer:hover .flipper-btn {
     display: inline-block;
 }
 
