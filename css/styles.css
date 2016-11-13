@@ -238,7 +238,8 @@ body {
 }
 
 .main-nav a:focus {
-    color: #a8abaf
+    color: #feffff;
+    background: #293449;
 }
 
 .main-nav a{
@@ -295,7 +296,7 @@ body {
 }
 
 .feature-right .feature-item:nth-child(2) {
-    background: #f6b22d;
+    background: #f67030;
 }
 
 .feature-item a{
@@ -315,6 +316,7 @@ body {
     border: 1px solid transparent;
     border-radius: 3px;
     min-width: 134px;
+    transition: 0.3s;
 }
 
 .feature-item a:hover {
@@ -379,21 +381,52 @@ body {
     /*top:-290px;*/
 /*}*/
 
+
+.popular-header {
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #f7f3ec;
+    width: 940px;
+}
+
+
 .pop-button, .pop-h {
     display: inline-block;
     box-sizing: border-box;
-    min-height: 90px;
+    vertical-align: top;
 }
 
 .pop-h {
-    width: 320px;
-    font-size: 30px
+    font-size: 30px;
+    min-height: 90px;
+    margin: 0;
+    font-family: "Cuprum", sans-serif;
+    line-height: 30px;
+    font-weight: 500;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #32425c;
+    padding: 33px;
 }
 
 .pop-button {
+    border-radius: 3px;
+    background-color: #ee3643;
     width: 253px;
     margin-left: 320px;
-    font-size: 14px
+    font-size: 14px;
+    color: #f5f6f6;
+    text-decoration: none;
+    padding: 14px 50px 14px 50px;
+    margin-top: 26px ;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.pop-button:hover {
+    background-color: #be2e35;
 }
 
 .popular-product, .popular-brand  {
@@ -404,6 +437,118 @@ body {
     margin-right: 20px;
     vertical-align: top;
     font-size: 18px;
+    border: 1px solid #e5e5e5;
+}
+
+.popular-product {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.popular-product:hover {
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.flipper-imgContainer {
+    text-align: center;
+    width: 220px;
+    height: 180px;
+    display: table-cell;
+    vertical-align: middle;
+    transition: 0.3s;
+}
+
+.flipper-imgContainer:hover img {
+    display: none;
+}
+
+.flipper-imgContainer:hover {
+    height: 10px;
+}
+
+/*.flipper-imgContainer:hover .popular-product{*/
+    /*border: transparent;*/
+    /*background: red;*/
+/*}*/
+
+.flipper-imgContainer:hover ~.flipper-btn {
+    display: inline-block;
+}
+
+.flipper-btn {
+    display: none;
+    text-align: center;
+    width: 220px;
+    height: 180px;
+    vertical-align: middle;
+}
+
+.buy-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    font-family: "Cuprum", sans-serif;
+    line-height: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: #e5e5e5;
+    background-color: #63a63e;
+    padding: 15px 45px 15px 45px;
+    margin: 45px 42px 7px 42px;
+}
+
+
+.flipper-imgContainer img {
+    margin: auto;
+}
+
+.popular .product-name {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 18px;
+    display: inline-block;
+}
+
+
+.popular .prev-price {
+    font-family: "PT Sans", sans-serif;
+    font-size: 17px;
+    line-height: 17px;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #999999;
+}
+
+.popular .current-price {
+    display: inline-block;
+    background-color: #ee3643;
+    font-family: "PT Sans", sans-serif;
+    font-size: 17px;
+    line-height: 17px;
+    padding: 12px 19px 13px 35px;
+    margin-bottom: 18px;
+    position: relative;
+    border-radius: 2px 0 0 2px;
+}
+
+.current-price:after {
+    content:'';
+    display: block;
+    position: absolute;
+    margin-right: -21px;
+    vertical-align: top;
+    right: 0;
+    top:0;
+    width: 0;
+    height: 0;
+    border: 21px solid transparent;
+    border-right: 0;
+    border-left-color: #ee3643;
 }
 
 .last {
