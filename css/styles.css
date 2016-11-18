@@ -9,6 +9,15 @@ body {
     min-height: 42px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.color-container {
+    background: #f2f6f8;
+}
+
 .logo, .input-search, .header-user-block {
     display: inline-block;
     min-height: 42px;
@@ -21,11 +30,6 @@ body {
     background: #293449;
     min-height: 42px;
     font-size: 0;
-
-}
-
-.header-main:hover {
-    background: #212a3a;
 }
 
 .logo {
@@ -47,6 +51,12 @@ body {
     padding: 6px 0 6px 0;
     margin: 0;
     color: #ffffff;
+    transition: 0.3s ease;
+}
+
+.logo h1:hover {
+    cursor: default;
+    font-size: 28px;
 }
 
 .input-search {
@@ -118,6 +128,17 @@ body {
 .header-user-block a:last-child {
     background: #63a63e;
     width: 150px;
+}
+
+.header-user-block a:hover {
+    background: #212a3a;
+    color: #ffffff;
+}
+
+
+.header-user-block a:last-child:hover {
+    background: #5fbb2d;
+    color: #ffffff;
 }
 
 .header-bottom {
@@ -387,6 +408,7 @@ body {
     box-sizing: border-box;
     background-color: #f7f3ec;
     width: 940px;
+    position: relative;
 }
 
 
@@ -414,7 +436,8 @@ body {
     border-radius: 3px;
     background-color: #ee3643;
     width: 253px;
-    margin-left: 320px;
+    position: absolute;
+    right: 25px;
     font-size: 14px;
     color: #f5f6f6;
     text-decoration: none;
@@ -446,12 +469,12 @@ body {
     margin-top: 20px;
 }
 
-.popular-product:hover {
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    cursor: pointer;
+.popular-product:hover, .popular-brand:hover {
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    cursor: default;
 }
 
-.flipper-imgContainer {
+.flipper-imgContainer, .popular-brand-cell {
     text-align: center;
     width: 220px;
     height: 180px;
@@ -480,6 +503,7 @@ body {
     width: 220px;
     height: 180px;
     vertical-align: middle;
+    transition: 3s;
 }
 
 .buy-btn {
@@ -490,15 +514,50 @@ body {
     font-weight: 500;
     text-align: center;
     text-decoration: none;
-    color: #e5e5e5;
+    color: #ffffff;
     background-color: #63a63e;
-    padding: 15px 45px 15px 45px;
+    padding-top: 13px;
     margin: 45px 42px 7px 42px;
+    min-height: 36px;
+    width: 136px;
+    border-radius: 2px;
+    box-shadow: 0 2px #367315;
+    transition: 0.3s;
 }
 
+.buy-btn:hover {
+    background-color: #5fbb2d;
+}
 
-.flipper-imgContainer img {
-    margin: auto;
+.buy-btn:active {
+    background-color: #63a63e;
+    box-shadow: none;
+}
+
+.fav-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    font-family: "Cuprum", sans-serif;
+    line-height: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: #32425c;
+    border: 2px #63a63e solid;
+    border-radius: 2px;
+    padding-top: 11px;
+    min-height: 36px;
+    width: 136px;
+    transition: 0.3s;
+}
+
+.fav-btn:hover {
+    border: 2px #32425c solid;
+}
+
+.fav-btn:active {
+    border: 2px #c1c6ce solid;
+    color: #c1c6ce;
 }
 
 .popular .product-name {
@@ -509,7 +568,6 @@ body {
     margin-bottom: 18px;
     display: inline-block;
 }
-
 
 .popular .prev-price {
     font-family: "PT Sans", sans-serif;
@@ -527,10 +585,14 @@ body {
     font-family: "PT Sans", sans-serif;
     font-size: 17px;
     line-height: 17px;
-    padding: 12px 19px 13px 35px;
-    margin-bottom: 18px;
+    font-weight: 700;
+    padding: 12px 0 13px 0;
+    width: 121px;
+    margin: 0 auto 18px auto ;
     position: relative;
     border-radius: 2px 0 0 2px;
+    color: #ffffff;
+    text-align: center;
 }
 
 .current-price:after {
@@ -557,14 +619,58 @@ body {
     margin-bottom: 20px;
 }
 
+.popular-brand-cell {
+    height: 146px;
+}
+
 .popular-brand {
     min-height: 146px;
+    margin-top: 20px;
+    text-align: center;
 }
+
+
+.popular-brand-cell img {
+    transition: all 0.2s ease;
+}
+
+.popular-brand-cell img:active {
+    -webkit-filter: opacity(50%);
+}
+
+.popular-brand-cell img:hover {
+    -webkit-filter: saturate(2.2);
+}
+
+
 
 .services {
     min-height: 523px;
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
+    background: #f2f6f8;
+    margin: 0 auto;
+    background-size: 100%;
+    position: relative;
+}
+
+.services-header {
+    font-family: "Cuprum", sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #32425c;
+    text-transform: uppercase;
+}
+
+.services-text {
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #32425c;
 }
 
 .services-description, .services-btn-group, .services-btn, .service {
@@ -573,36 +679,116 @@ body {
 }
 
 .services-description {
-    width: 460px;
+    padding-top: 70px;
+    width: 430px;
     min-height: 200px;
     margin-right: 420px;
 }
 
 .services-btn-group {
+    padding: 35px 0 35px 0;
     width: 240px;
     min-height: 186px;
     margin-right: 80px;
+    position: relative;
 }
 
 .services-btn {
     width: 240px;
     min-height: 62px;
+    border-top: 1px solid #405069;
+    border-right-width: 0;
+    border-bottom: 1px solid #293449;
+    border-left-width: 0;
+    background: #32425c;
+    text-align: left;
+    padding-left: 23px;
+    font-family: "Cuprum", sans-serif;
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.services-btn:hover {
+    background: #ffffff;
+    color: #405069;
+    border: 0;
+    cursor: pointer;
+}
+
+.services-btn:active, .services-btn:focus {
+    outline: none;
+}
+
+.services-shadow {
+    position: absolute;
+    right: 0;
+    top: -5px;
 }
 
 .service {
-    width: 310px;
+    width: 280px;
     min-height: 184px;
     margin-right: 40px;
+    text-align: left;
+    z-index: 2;
+    position: relative;
+    vertical-align: top;
 }
 
 .delivery-pic {
     margin-right: 0;
     display: inline-block;
     box-sizing: border-box;
+    position: absolute;
+    right: 20px;
+    top: 260px;
+    z-index: -0;
 }
 
-.warranty, .credit {
+.delivery, .warranty, .credit {
     display: none;
+}
+
+.show-service {
+    display: inline-block;
+}
+
+.active-btn {
+    background: #ffffff;
+    color: #405069;
+    border: 0;
+}
+
+.about-company-header {
+    font-family: "Cuprum", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 43px;
+}
+
+.about-company-text {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.delivery-brand {
+    font-family: "Cuprum", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 33px;
+}
+
+.about-company-btn {
+    position:relative;
+    margin-left: 25px;
+}
+
+.map {
+    display: inline-block;
 }
 
 .about-company {
@@ -620,21 +806,30 @@ body {
     width: 365px;
     min-height: 450px;
     padding-top: 70px;
+    vertical-align: top;
+    margin-bottom: 85px;
+}
+
+.main-footer {
+    background: #293449;
+    min-height: 110px;
 }
 
 .main-footer-about {
     display: inline-block;
     box-sizing: border-box;
     width: 240px;
-    min-height: 110px;
     margin-right: 140px;
+    font-size: 16px;
+    line-height: 18px;
+    padding-top: 39px;
+    color: #ffffff;
 }
 
 .footer-social {
     display: inline-block;
     box-sizing: border-box;
     width: 150px;
-    min-height: 110px;
     margin-right: 160px;
 }
 
@@ -642,5 +837,8 @@ body {
     display: inline-block;
     box-sizing: border-box;
     width: 140px;
-    min-height: 110px;
+    font-size: 16px;
+    line-height: 18px;
+    padding-top: 39px;
+    color: #ffffff;
 }
