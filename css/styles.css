@@ -56,13 +56,21 @@ img {
 
 .logo h1:hover {
     cursor: default;
-    font-size: 28px;
 }
 
-.input-search {
+.search-block {
+    display: inline-block;
+    width: 270px;
+    position: relative;
+    font-size: 17px;
+}
+
+.search-input {
+    vertical-align: top;
     background: #293449;
     box-sizing: border-box;
-    padding:12px 0 12px 20px;
+    /*margin-left: 30px;*/
+    padding:12px 0 12px 40px;
     border: 0;
     text-align: left;
     width: 270px;
@@ -71,34 +79,50 @@ img {
     line-height: 18px;
     color:#e0e1e3;
     font-family: "Cuprum", sans-serif;
+    position: relative;
 }
 
-.input-search:hover {
+.search-icon {
+    position: absolute;
+    top: 11px;
+    left: 13px;
+    z-index: 1;
+    color: #6a7180;
+}
+
+.search-input:hover, .search-icon:hover {
     background: #212a3a;
 }
 
-.input-search:focus {
+.search-input:focus ~.search-icon {
+    color: #ee3643;
+    transition: 0.5s ease;
+}
+
+.search-input:focus, .search-input:focus {
     background: #ffffff;
     color: #000000;
     transition: background 0.5s ease;
     outline: none;
 }
 
-.input-search::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-.input-search::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-.input-search:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-.input-search:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-.input-search:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-.input-search:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-.input-search:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-.input-search:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+.search-input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+.search-input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+.search-input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+.search-input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+.search-input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+.search-input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+.search-input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+.search-input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
 
 ::-webkit-input-placeholder {
     color:#e0e1e3;
     font-family: "Cuprum", sans-serif;
     font-size: 17px;
     line-height: 18px;
-    padding:12px 0 12px 20px;
+    padding:11px 0 12px 0;
+    position: relative;
+    z-index: 0;
 }
 
 .header-user-block {
@@ -110,24 +134,30 @@ img {
 
 .header-user-block>a {
     box-sizing: border-box;
-    padding:12px 0 12px;
+    padding:12px 10px 12px;
     display: inline-block;
     color:#e0e1e3;
     font-family: "Cuprum", sans-serif;
     font-size: 17px;
     line-height: 18px;
     margin: 0;
-    width: 140px;
+    width: 150px;
     text-align: center;
     text-decoration: none;
+    position: relative;
+    min-height: 42px;
 }
-.header-user-block a:nth-child(2){
-    width: 160px;
+
+.user-block-icon {
+    position: absolute;
+    top: 11px;
+    left: 13px;
+    /*color: #6a7180;*/
+    font-size: 17px;
 }
 
 .header-user-block a:last-child {
     background: #63a63e;
-    width: 150px;
 }
 
 .header-user-block a:hover {
@@ -181,6 +211,7 @@ img {
     font-size: 14px;
     line-height: 20px;
     margin-right: 15px;
+    position: relative;
 }
 
 .contact>b {
@@ -194,16 +225,27 @@ img {
     padding: 12px 0 12px 0;
     margin-top: 43px;
     color: #e9292a;
+    position: relative;
 }
 
-.contact>span {
+.contact-address {
     display: inline-block;
     box-sizing: border-box;
     font-size: 14px;
     line-height: 14px;
     width: 270px;
     padding: 10px 0 10px 0;
+}
 
+.contact-icon {
+    position: absolute;
+    top: 12px;
+    left: 26px;
+    color: #b7bfc8;
+}
+
+.user-block {
+    position: relative;
 }
 
 .user-block>a {
@@ -221,6 +263,18 @@ img {
     background: #ffffff;
     text-align: center;
     color: #000000;
+}
+
+.login-icon {
+    position: absolute;
+    top: 52px;
+    left: 32px;
+    color: #b7bfc8;
+    font-size: 20px;
+}
+
+.user-block>a:hover ~ .login-icon {
+    color: #32425c;
 }
 
 .user-block>a:hover {
@@ -263,8 +317,8 @@ img {
     background: #293449;
 }
 
-.main-nav a{
-    font-family: "Cuprum", sans-serif;
+.main-nav a {
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
     line-height: 17px;
     text-align: center;
@@ -278,13 +332,85 @@ img {
     padding: 0;
 }
 
-.feature-item-carousel {
+.feature-item-slider {
     width: 620px;
-    min-height: 125px;
+    min-height: 266px;
     display: inline-block;
     box-sizing: border-box;
     margin: 0 20px 20px 0;
+    background: url('../images/Features/Features-slider/Man-perfodrill.jpg') ;
+    position: relative;
+    transition: 1s ease;
 }
+
+
+.drill {
+    background-position: right;
+    transition: 1s;
+}
+
+.slider-text {
+    position: absolute;
+    display: none;
+}
+
+.active-text {
+    display: inline-block;
+}
+
+.slider-header {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 28px 0 6px 28px;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.slider-description {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 0 28px;
+    color: #ffffff;
+    font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.arrow-prev, .arrow-next {
+    position: absolute;
+    background: transparent;
+    font-size: 40px;
+    border: 0;
+    color: #ffffff;
+    top: 105px;
+}
+
+.arrow-prev {
+    left: 25px;
+}
+
+.arrow-next {
+    right: 25px;
+}
+
+.arrow-prev:hover, .arrow-next:hover, .arrow-prev:focus, .arrow-next:focus {
+    outline: none;
+    cursor: pointer;
+    color: rgba(199, 50, 50, 0.62);
+    transition: 0.5s;
+}
+
+/*.slider-dots {*/
+    /*position: absolute;*/
+    /*top: 220px;*/
+    /*left: 296px;*/
+/*}*/
+
+/*.dot {*/
+    /*!*vertical-align: top;*!*/
+    /*!*width: 17px;*!*/
+    /*!*height: 17px;*!*/
+    /*!*margin: 0 3px 0 0;*!*/
+/*!*}*!*/
 
 .feature {
     font-size: 0;
@@ -386,22 +512,6 @@ img {
     font-size: 0;
     vertical-align: top;
 }
-/*.feature-item:nth-child(5) {*/
-     /*margin-bottom: -143px;*/
-     /*margin-top: 20px;*/
-     /*margin-left: 640px;*/
-     /*position:relative;*/
-     /*top:-287px;*/
- /*}*/
-
-/*.feature-item:nth-child(6) {*/
-    /*margin-bottom: -266px;*/
-    /*margin-top: 167px;*/
-    /*margin-left: 640px;*/
-    /*position:relative;*/
-    /*top:-290px;*/
-/*}*/
-
 
 .popular-header {
     display: inline-block;
@@ -447,6 +557,13 @@ img {
     text-align: center;
     transition: 0.3s;
 }
+
+
+.slider-pop-button {
+    left: 25px;
+    bottom: 25px;
+}
+
 
 .pop-button:hover {
     background-color: #be2e35;
@@ -831,6 +948,24 @@ img {
     box-sizing: border-box;
     width: 150px;
     margin-right: 160px;
+}
+
+.footer-social>a {
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    background: #212a3a;
+    text-align: center;
+    padding: 9px 0 15px 0;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f0f1f2;
+}
+
+.footer-social>a:hover {
+    background: #ee3643;
 }
 
 .developer {
